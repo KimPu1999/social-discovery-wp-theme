@@ -1,0 +1,6 @@
+{
+  "$schema":"https://schemas.wp.org/trunk/theme.json",
+  "version":2,
+  "settings":{"appearanceTools":true,"layout":{"contentSize":"760px","wideSize":"1200px"},"color":{"custom":false,"palette":[{"slug":"primary","color":"#2563EB","name":"Primary"},{"slug":"secondary","color":"#7C3AED","name":"Secondary"},{"slug":"text","color":"#0F172A","name":"Text"},{"slug":"surface","color":"#FFFFFF","name":"Surface"}]},"spacing":{"units":["px","%","em","rem","vw","vh"]},"typography":{"fluid":true,"fontFamilies":[{"slug":"system","fontFamily":"Inter, ui-sans-serif, system-ui, sans-serif","name":"System"}]}},
+  "styles":{"color":{"background":"#F8FAFC","text":"#0F172A"},"spacing":{"blockGap":"1.25rem"},"typography":{"fontFamily":"var(--wp--preset--font-family--system)","lineHeight":"1.6"},"elements":{"button":{"border":{"radius":"10px"}}}}
+}
