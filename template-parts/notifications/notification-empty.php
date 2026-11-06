@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><div class="sd-empty-state"><h2><?php esc_html_e( 'No notifications', 'social-discovery' ); ?></h2><p><?php esc_html_e( 'You are all caught up.', 'social-discovery' ); ?></p></div>

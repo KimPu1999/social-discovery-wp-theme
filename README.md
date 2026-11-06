@@ -79,6 +79,12 @@ Create pages using the Communities, My Communities, and Messages templates. Enab
 
 Private conversations use BuddyPress message threads only. The companion plugin validates thread participation, recipient permissions, REST nonces, and rate limits before sending or changing message state. Real-time messaging, global message deletion, and blocking enforcement are not claimed unless the active platform provides those capabilities.
 
+## Phase 06 dashboard and notifications
+
+Create pages using the Member Dashboard, Notification Center, and Personal Workspace templates. These pages require authentication and redirect guests through WordPress login. Dashboard counts and profile completion are derived from current-user data. BuddyPress Notifications, Friends, Groups, and Messages widgets remain component-aware and show unavailable states when their components are inactive.
+
+The notification center uses BuddyPress notification records and the companion REST handler for ownership-checked read actions. Personalized dashboard content is not intended for shared public caching. The floating notification shortcut is rendered only for authenticated users when BuddyPress Notifications is active.
+
 ## Menus and Elementor
 
 The theme registers Primary, Secondary, Footer, and Mobile locations. Native templates are always available. Elementor Pro theme locations are registered through the supported Elementor API when Elementor is active, and the theme avoids rendering a native header or footer when Elementor supplies one.

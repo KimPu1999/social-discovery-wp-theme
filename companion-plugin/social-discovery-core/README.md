@@ -38,3 +38,7 @@ Saved activities store only activity IDs in per-user metadata. Each save/read ac
 ## Phase 05 communities and messaging
 
 The plugin adds guarded BuddyPress Groups and Private Messaging helpers. Group membership actions use BuddyPress APIs and REST authentication. Message sending, replies, read/unread state, deletion requests, and thread access are validated against the logged-in participant before BuddyPress APIs are called. No parallel group or message tables are created, and the plugin does not activate BuddyPress components automatically.
+
+## Phase 06 dashboard and notifications
+
+The plugin provides current-user dashboard aggregation, profile-completion data, dashboard preference storage, notification ownership checks, notification actions, and REST endpoints for private dashboard data and notification state changes. It uses BuddyPress notification records and does not create duplicate notifications. BuddyPress Notifications must be active for notification actions to work.

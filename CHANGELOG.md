@@ -35,3 +35,10 @@
 - Added BuddyPress Private Messaging inbox, conversations, compose, reply, and message-state foundation.
 - Added guarded companion-plugin permissions and REST handlers for group membership and private messages.
 - Added responsive community and messaging styles, scripts, Customizer settings, and documentation.
+
+## 1.5.0
+
+- Added authenticated Member Dashboard, Personal Workspace, profile completion, summary cards, quick actions, and saved-content preview.
+- Added BuddyPress-aware Notification Center, unread count, filters, notification ownership checks, and mark-read actions.
+- Added dashboard Customizer settings and responsive dashboard, notification, and workspace assets.
+- Added companion-plugin dashboard aggregation and notification REST foundations.

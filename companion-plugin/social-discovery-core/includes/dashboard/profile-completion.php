@@ -1,0 +1,3 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_profile_completion( $user_id = 0 ) { $user_id = $user_id ? absint( $user_id ) : get_current_user_id(); $user = get_userdata( $user_id ); if ( ! $user ) { return array( 'percent' => 0, 'missing' => array() ); } $has_avatar = function_exists( 'bp_get_user_has_avatar' ) ? (bool) bp_get_user_has_avatar( $user_id ) : false; $checks = array( (bool) $user->display_name, (bool) $user->description, $has_avatar, (bool) get_user_meta( $user_id, 'sd_user_interests', true ), (bool) get_user_meta( $user_id, 'sd_profile_visibility', true ) ); return array( 'percent' => (int) round( count( array_filter( $checks ) ) / count( $checks ) * 100 ) ); }

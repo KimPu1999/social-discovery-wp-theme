@@ -1,7 +1,7 @@
 <?php
 /** Social Discovery theme bootstrap. */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'SD_VERSION', '1.3.0' );
+define( 'SD_VERSION', '1.5.0' );
 define( 'SD_DIR', get_template_directory() );
 define( 'SD_URI', get_template_directory_uri() );
 require_once SD_DIR . '/inc/theme-defaults.php';
@@ -45,3 +45,11 @@ require_once SD_DIR . '/inc/communities/customizer.php';
 require_once SD_DIR . '/inc/messaging/setup.php';
 require_once SD_DIR . '/inc/messaging/message-templates.php';
 require_once SD_DIR . '/inc/messaging/messaging-navigation.php';
+require_once SD_DIR . '/inc/dashboard/setup.php';
+require_once SD_DIR . '/inc/dashboard/dashboard-functions.php';
+require_once SD_DIR . '/inc/dashboard/dashboard-templates.php';
+require_once SD_DIR . '/inc/dashboard/navigation.php';
+require_once SD_DIR . '/inc/dashboard/customizer.php';
+require_once SD_DIR . '/inc/notifications/setup.php';
+require_once SD_DIR . '/inc/notifications/notification-functions.php';
+require_once SD_DIR . '/inc/notifications/notification-templates.php';

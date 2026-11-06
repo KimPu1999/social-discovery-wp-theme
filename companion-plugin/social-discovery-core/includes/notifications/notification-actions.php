@@ -1,0 +1,3 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_notification_action( $notification_id, $action ) { if ( ! sd_core_notification_owner( $notification_id ) ) { return new WP_Error( 'forbidden', __( 'That notification is unavailable.', 'social-discovery-core' ), array( 'status' => 403 ) ); } if ( 'read' === $action && function_exists( 'bp_notifications_mark_notification' ) ) { return bp_notifications_mark_notification( get_current_user_id(), absint( $notification_id ) ); } return new WP_Error( 'unsupported_action', __( 'That notification action is unavailable.', 'social-discovery-core' ), array( 'status' => 400 ) ); }

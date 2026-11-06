@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><section class="sd-dashboard-card"><h2><?php esc_html_e( 'Invitations', 'social-discovery' ); ?></h2><p class="sd-muted"><?php esc_html_e( 'Community invitations will appear here when BuddyPress invitation APIs are enabled.', 'social-discovery' ); ?></p></section>

@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><div class="sd-notification-actions"><button type="button" data-sd-mark-all><?php esc_html_e( 'Mark all as read', 'social-discovery' ); ?></button></div>

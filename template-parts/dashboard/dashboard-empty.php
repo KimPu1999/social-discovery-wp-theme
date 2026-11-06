@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><div class="sd-empty-state"><h2><?php esc_html_e( 'Your dashboard is ready', 'social-discovery' ); ?></h2><p><?php esc_html_e( 'As you participate, your communities, connections, and saved posts will appear here.', 'social-discovery' ); ?></p></div>
