@@ -1,0 +1,1 @@
+<?php /* Template Name: Elementor Full Width */ get_header(); ?><main id="primary" class="sd-main sd-elementor-full-width"><div class="sd-content-wrap"><?php while ( have_posts() ) : the_post(); the_content(); endwhile; ?></div></main><?php get_footer(); ?>

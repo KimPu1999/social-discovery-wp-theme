@@ -1,0 +1,1 @@
+(function(){'use strict';var images=document.querySelectorAll('.sd-home-hero-image,.sd-home-article-image img');images.forEach(function(image){image.addEventListener('error',function(){image.closest('a,div').classList.add('sd-media-failed');});});}());

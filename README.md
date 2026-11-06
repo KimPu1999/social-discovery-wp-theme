@@ -29,6 +29,23 @@ Social Discovery is a classic WordPress theme foundation for a professional comm
 - Gutenberg wide alignment, responsive embeds, custom logo, featured images, and HTML5 support.
 - BuddyPress-safe compatibility foundation without duplicating social business logic.
 
+## Phase 02 homepage builder
+
+- Native homepage section renderer with allowlisted section ordering.
+- Configurable Hero, Featured Communities, Discover People, Explore Interests, Public Discussions, How It Works, Benefits, Guidelines, Latest Articles, Join CTA, FAQ, and Contact CTA sections.
+- Native WordPress content mode for Elementor-built assigned homepage content.
+- BuddyPress-safe groups, public members, and public activity sources when BuddyPress is active.
+- WordPress posts, categories, tags, page selectors, hero media, CTA URLs, and FAQ controls through Appearance → Customize → Social Discovery Homepage.
+- Elementor Full Width, Elementor Canvas-compatible page templates, and native fallback templates.
+
+## Homepage setup
+
+Use Settings → Reading to assign a static front page. The default homepage mode renders native Social Discovery sections. Set Homepage Rendering Mode to “Assigned page content” when the assigned page is built with Elementor or Gutenberg and should render through `the_content()` instead.
+
+Dynamic sections never fabricate members, groups, activity, interests, or articles. They hide cleanly when no public source is available. Public WordPress categories and tags are used for Explore Interests until a future companion-plugin interest source is available.
+
+Recommended images: hero images around 1200×800px; article card images around 640×420px.
+
 ## Menus and Elementor
 
 The theme registers Primary, Secondary, Footer, and Mobile locations. Native templates are always available. Elementor Pro theme locations are registered through the supported Elementor API when Elementor is active, and the theme avoids rendering a native header or footer when Elementor supplies one.

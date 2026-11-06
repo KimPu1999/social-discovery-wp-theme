@@ -1,7 +1,7 @@
 <?php
 /** Social Discovery theme bootstrap. */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'SD_VERSION', '1.0.0' );
+define( 'SD_VERSION', '1.1.0' );
 define( 'SD_DIR', get_template_directory() );
 define( 'SD_URI', get_template_directory_uri() );
 require_once SD_DIR . '/inc/theme-defaults.php';
@@ -14,3 +14,13 @@ require_once SD_DIR . '/inc/customizer-design.php';
 require_once SD_DIR . '/inc/template-functions.php';
 require_once SD_DIR . '/inc/navigation.php';
 require_once SD_DIR . '/inc/compatibility.php';
+require_once SD_DIR . '/inc/homepage/setup.php';
+require_once SD_DIR . '/inc/homepage/functions.php';
+require_once SD_DIR . '/inc/homepage/sections.php';
+require_once SD_DIR . '/inc/homepage/helpers.php';
+require_once SD_DIR . '/inc/homepage/content-sources.php';
+require_once SD_DIR . '/inc/homepage/customizer.php';
+require_once SD_DIR . '/inc/elementor/setup.php';
+require_once SD_DIR . '/inc/elementor/theme-locations.php';
+require_once SD_DIR . '/inc/elementor/compatibility.php';
+require_once SD_DIR . '/inc/buddypress/homepage-integration.php';

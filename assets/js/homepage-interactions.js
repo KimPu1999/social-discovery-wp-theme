@@ -1,0 +1,1 @@
+(function(){'use strict';document.querySelectorAll('.sd-home-faq-list summary').forEach(function(summary){summary.addEventListener('keydown',function(event){if(event.key==='Enter'||event.key===' '){event.preventDefault();summary.parentElement.open=!summary.parentElement.open;}});});}());
