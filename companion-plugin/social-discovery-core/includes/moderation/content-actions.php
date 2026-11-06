@@ -1,0 +1,3 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_content_action( $target_type, $target_id, $action ) { if ( ! sd_core_can_moderate( 'sd_moderate_activity' ) ) { return new WP_Error( 'forbidden', __( 'You cannot moderate this content.', 'social-discovery-core' ), array( 'status' => 403 ) ); } if ( 'activity' === $target_type && function_exists( 'bp_activity_delete' ) && 'delete' === $action ) { $result = bp_activity_delete( array( 'id' => absint( $target_id ) ) ); sd_core_audit( 'activity_delete', $target_type, $target_id, $result ? 'success' : 'failed' ); return $result; } return new WP_Error( 'unsupported_action', __( 'That moderation action is unavailable.', 'social-discovery-core' ), array( 'status' => 400 ) ); }

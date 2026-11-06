@@ -42,3 +42,10 @@
 - Added BuddyPress-aware Notification Center, unread count, filters, notification ownership checks, and mark-read actions.
 - Added dashboard Customizer settings and responsive dashboard, notification, and workspace assets.
 - Added companion-plugin dashboard aggregation and notification REST foundations.
+
+## 1.6.0
+
+- Added companion-plugin report, report-action, block, restriction, and audit-log schema with idempotent migration.
+- Added least-privilege moderation capabilities and Social Discovery admin control center pages.
+- Added authenticated report/block frontend controls and protected REST endpoints.
+- Added WordPress personal-data exporter and eraser integrations plus safety settings.

@@ -1,0 +1,3 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_audit( $action, $target_type, $target_id, $outcome = 'success', $reason = '', $report_id = 0 ) { global $wpdb; $t = sd_core_table_names(); return $wpdb->insert( $t['audit'], array( 'actor_id' => get_current_user_id(), 'action' => sanitize_key( $action ), 'target_type' => sanitize_key( $target_type ), 'target_id' => absint( $target_id ), 'report_id' => absint( $report_id ), 'outcome' => sanitize_key( $outcome ), 'reason' => sanitize_textarea_field( $reason ), 'created_at' => current_time( 'mysql', true ) ), array( '%d', '%s', '%s', '%d', '%d', '%s', '%s', '%s', '%s' ) ); }

@@ -53,3 +53,7 @@ require_once SD_DIR . '/inc/dashboard/customizer.php';
 require_once SD_DIR . '/inc/notifications/setup.php';
 require_once SD_DIR . '/inc/notifications/notification-functions.php';
 require_once SD_DIR . '/inc/notifications/notification-templates.php';
+require_once SD_DIR . '/inc/moderation/setup.php';
+require_once SD_DIR . '/inc/moderation/report-templates.php';
+require_once SD_DIR . '/inc/moderation/blocking-templates.php';
+require_once SD_DIR . '/inc/privacy/privacy-templates.php';

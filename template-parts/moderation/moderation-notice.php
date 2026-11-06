@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><div class="sd-moderation-notice" role="status"><?php echo esc_html( $args['message'] ?? __( 'This action is subject to community safety rules.', 'social-discovery' ) ); ?></div>

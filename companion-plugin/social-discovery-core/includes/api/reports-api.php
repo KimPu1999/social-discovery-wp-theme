@@ -1,0 +1,3 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_api_create_report( WP_REST_Request $request ) { if ( function_exists( 'sd_core_rate_limited' ) && sd_core_rate_limited( 'report_create', 5 ) ) { return new WP_Error( 'rate_limited', __( 'Please wait before submitting another report.', 'social-discovery-core' ), array( 'status' => 429 ) ); } $result = sd_core_create_report( array( 'target_type' => $request->get_param( 'target_type' ), 'target_id' => $request->get_param( 'target_id' ), 'reason' => $request->get_param( 'reason' ), 'description' => $request->get_param( 'description' ) ) ); return is_wp_error( $result ) ? $result : rest_ensure_response( array( 'report_id' => absint( $result ), 'status' => 'submitted' ) ); }

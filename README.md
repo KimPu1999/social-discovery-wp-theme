@@ -85,6 +85,12 @@ Create pages using the Member Dashboard, Notification Center, and Personal Works
 
 The notification center uses BuddyPress notification records and the companion REST handler for ownership-checked read actions. Personalized dashboard content is not intended for shared public caching. The floating notification shortcut is rendered only for authenticated users when BuddyPress Notifications is active.
 
+## Phase 07 moderation and privacy
+
+Social Discovery Core adds versioned tables for reports, report actions, blocks, restrictions, and append-only audit records. It registers least-privilege moderation capabilities and a WordPress admin control center for overview, moderation queue, restrictions, audit logs, and safety settings. Frontend report and block controls use authenticated REST requests with nonce checks and server-side ownership/capability validation.
+
+The plugin also registers WordPress personal-data exporter and eraser callbacks for Social Discovery user metadata. Moderation and audit records may be retained for safety and legal obligations. Full BuddyPress component behavior requires BuddyPress to be installed and configured.
+
 ## Menus and Elementor
 
 The theme registers Primary, Secondary, Footer, and Mobile locations. Native templates are always available. Elementor Pro theme locations are registered through the supported Elementor API when Elementor is active, and the theme avoids rendering a native header or footer when Elementor supplies one.

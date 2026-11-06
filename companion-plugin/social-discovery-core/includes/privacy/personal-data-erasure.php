@@ -1,0 +1,5 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_register_eraser( $erasers ) { $erasers['social-discovery-core'] = array( 'eraser_friendly_name' => __( 'Social Discovery data', 'social-discovery-core' ), 'callback' => 'sd_core_erase_personal_data' ); return $erasers; }
+function sd_core_erase_personal_data( $email_address, $page = 1 ) { $user = get_user_by( 'email', $email_address ); if ( ! $user ) { return array( 'items_removed' => false, 'items_retained' => false, 'messages' => array(), 'done' => true ); } foreach ( array( 'sd_user_interests', 'sd_saved_activity_ids', 'sd_dashboard_preferences', 'sd_notification_preferences', 'sd_profile_visibility' ) as $key ) { delete_user_meta( $user->ID, $key ); } return array( 'items_removed' => true, 'items_retained' => true, 'messages' => array( __( 'Moderation and audit records may be retained for safety and legal obligations.', 'social-discovery-core' ) ), 'done' => true ); }
+add_filter( 'wp_privacy_personal_data_erasers', 'sd_core_register_eraser' );

@@ -42,3 +42,7 @@ The plugin adds guarded BuddyPress Groups and Private Messaging helpers. Group m
 ## Phase 06 dashboard and notifications
 
 The plugin provides current-user dashboard aggregation, profile-completion data, dashboard preference storage, notification ownership checks, notification actions, and REST endpoints for private dashboard data and notification state changes. It uses BuddyPress notification records and does not create duplicate notifications. BuddyPress Notifications must be active for notification actions to work.
+
+## Phase 07 moderation and privacy
+
+The plugin creates versioned WordPress tables for reports, report actions, member blocks, restrictions, and audit logs. It registers the `sd_moderator` role and least-privilege capabilities without granting `manage_options`. Reports and blocks are submitted through nonce-protected REST routes, while report status changes and audit viewing require explicit capabilities. Personal-data exporter and eraser callbacks cover Social Discovery user metadata; moderation and audit records may be retained for safety and legal obligations.
