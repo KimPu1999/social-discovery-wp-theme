@@ -1,0 +1,4 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_social_assets() { if ( is_page_template( array( 'page-templates/social-feed.php', 'page-templates/discover-people.php', 'page-templates/member-directory.php' ) ) ) { foreach ( array( 'social-feed', 'people-discovery', 'member-cards', 'social-responsive' ) as $style ) { wp_enqueue_style( 'sd-' . $style, SD_URI . '/assets/css/' . $style . '.css', array( 'sd-style' ), SD_VERSION ); } foreach ( array( 'social-feed', 'activity-composer', 'people-discovery', 'social-interactions' ) as $script ) { wp_enqueue_script( 'sd-' . $script, SD_URI . '/assets/js/' . $script . '.js', array(), SD_VERSION, true ); } wp_localize_script( 'sd-social-feed', 'sdSocial', array( 'restUrl' => esc_url_raw( rest_url( 'social-discovery/v1/' ) ), 'nonce' => wp_create_nonce( 'wp_rest' ), 'loggedIn' => is_user_logged_in() ) ); } }
+add_action( 'wp_enqueue_scripts', 'sd_social_assets' );

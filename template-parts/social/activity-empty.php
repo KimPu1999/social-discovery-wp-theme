@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><div class="sd-card sd-empty"><h3><?php esc_html_e( 'No activity to show', 'social-discovery' ); ?></h3><p><?php esc_html_e( 'Try another filter or check back when the community has something new to share.', 'social-discovery' ); ?></p></div>

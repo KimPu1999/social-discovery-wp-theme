@@ -62,6 +62,17 @@ Create pages using the Login, Register, Forgot Password, Reset Password, Onboard
 
 The companion plugin owns onboarding state, interest preferences, profile privacy, rate limits, form handlers, and profile updates. BuddyPress remains the source of truth for extended profiles, avatars, cover images, groups, activity, and activation when installed. Email delivery is not claimed as configured; verify `wp_mail()` or SMTP separately.
 
+## Phase 04 social features
+
+- Social Feed, Discover People, and Member Directory page templates.
+- BuddyPress-backed public activity feed, favorites, comments, feed filters, and text composer when BuddyPress is active.
+- BuddyPress Friends connection controls when the Friends component is active.
+- Bounded member search, sorting, public interest filtering, and deterministic shared-interest recommendations.
+- Companion-plugin saved activity references using user metadata; saved content is rechecked against activity visibility.
+- REST API routes are protected by logged-in checks, WordPress REST nonces, rate limits, and BuddyPress availability checks.
+
+Create pages using the Social Feed, Discover People, or Member Directory templates. If BuddyPress is not active, the pages show an honest unavailable/empty state instead of fake social content.
+
 ## Menus and Elementor
 
 The theme registers Primary, Secondary, Footer, and Mobile locations. Native templates are always available. Elementor Pro theme locations are registered through the supported Elementor API when Elementor is active, and the theme avoids rendering a native header or footer when Elementor supplies one.

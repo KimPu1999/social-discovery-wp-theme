@@ -1,7 +1,7 @@
 <?php
 /** Social Discovery theme bootstrap. */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'SD_VERSION', '1.1.0' );
+define( 'SD_VERSION', '1.3.0' );
 define( 'SD_DIR', get_template_directory() );
 define( 'SD_URI', get_template_directory_uri() );
 require_once SD_DIR . '/inc/theme-defaults.php';
@@ -31,3 +31,9 @@ require_once SD_DIR . '/inc/members/profile-template.php';
 require_once SD_DIR . '/inc/members/profile-components.php';
 require_once SD_DIR . '/inc/members/profile-navigation.php';
 require_once SD_DIR . '/inc/onboarding/onboarding-templates.php';
+require_once SD_DIR . '/inc/social/setup.php';
+require_once SD_DIR . '/inc/social/activity-functions.php';
+require_once SD_DIR . '/inc/social/member-functions.php';
+require_once SD_DIR . '/inc/social/feed-templates.php';
+require_once SD_DIR . '/inc/social/discovery-templates.php';
+require_once SD_DIR . '/inc/customizer-social.php';

@@ -1,0 +1,4 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_api_save_activity( WP_REST_Request $request ) { $id = absint( $request->get_param( 'activity_id' ) ); if ( ! sd_core_activity_visible( $id ) ) { return new WP_Error( 'invalid_activity', __( 'That activity is unavailable.', 'social-discovery-core' ), array( 'status' => 404 ) ); } $save = filter_var( $request->get_param( 'save' ), FILTER_VALIDATE_BOOLEAN ); return rest_ensure_response( array( 'saved' => $save, 'ids' => sd_core_saved_activity( get_current_user_id(), $id, $save ) ) ); }
+function sd_core_api_recommendations() { $items = array(); foreach ( sd_core_recommend_members( get_current_user_id(), 6 ) as $recommendation ) { $items[] = array( 'member_id' => absint( $recommendation['user']->ID ), 'display_name' => sanitize_text_field( $recommendation['user']->display_name ), 'shared_interests' => absint( $recommendation['shared_interests'] ) ); } return rest_ensure_response( $items ); }

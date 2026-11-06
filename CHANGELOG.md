@@ -21,3 +21,10 @@
 - Added multi-step onboarding with progress, profile, interest, privacy, and completion screens.
 - Added member profile, account settings, profile visibility, and header account navigation.
 - Added BuddyPress-safe profile, avatar, public activity, and activation integration points.
+
+## 1.3.0
+
+- Added BuddyPress-backed social feed, composer, public activity cards, filters, favorites, and comments foundation.
+- Added member discovery and directory templates with search, sorting, interest filters, and deterministic recommendations.
+- Added Friends-component connection actions and saved-activity references in Social Discovery Core.
+- Added REST API permission checks, rate limits, and responsive social UI assets.

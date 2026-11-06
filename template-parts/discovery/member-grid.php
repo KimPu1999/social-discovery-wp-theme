@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } $members = $args['members']; ?><div class="sd-member-grid sd-member-layout-<?php echo esc_attr( sd_get_option( 'sd_social_member_layout' ) ); ?>"><?php foreach ( $members as $member ) { get_template_part( 'template-parts/discovery/member-card', null, array( 'member' => $member ) ); } ?></div>
