@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><div class="sd-empty-state"><h2><?php esc_html_e( 'No messages yet', 'social-discovery' ); ?></h2><p><?php esc_html_e( 'Start a private conversation when messaging is enabled.', 'social-discovery' ); ?></p></div>

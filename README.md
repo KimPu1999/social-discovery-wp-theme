@@ -73,6 +73,12 @@ The companion plugin owns onboarding state, interest preferences, profile privac
 
 Create pages using the Social Feed, Discover People, or Member Directory templates. If BuddyPress is not active, the pages show an honest unavailable/empty state instead of fake social content.
 
+## Phase 05 communities and messaging
+
+Create pages using the Communities, My Communities, and Messages templates. Enable BuddyPress Groups and Private Messaging to activate the corresponding features. Community directory and group-detail layouts use BuddyPress data, while hidden groups and private activity remain guarded by server-side checks.
+
+Private conversations use BuddyPress message threads only. The companion plugin validates thread participation, recipient permissions, REST nonces, and rate limits before sending or changing message state. Real-time messaging, global message deletion, and blocking enforcement are not claimed unless the active platform provides those capabilities.
+
 ## Menus and Elementor
 
 The theme registers Primary, Secondary, Footer, and Mobile locations. Native templates are always available. Elementor Pro theme locations are registered through the supported Elementor API when Elementor is active, and the theme avoids rendering a native header or footer when Elementor supplies one.

@@ -34,3 +34,7 @@ Handlers use WordPress nonces, capability/ownership checks, native password APIs
 When BuddyPress is active, the plugin registers nonce-protected REST routes under `/wp-json/social-discovery/v1/` for creating public activity, comments, favorites, saving activity references, connections, and bounded recommendations. The routes return errors when BuddyPress or the relevant component is unavailable; they do not create parallel activity or friendship storage.
 
 Saved activities store only activity IDs in per-user metadata. Each save/read action rechecks activity availability through BuddyPress. Recommendations use explicitly selected public interests only, exclude the current user, and use stable shared-interest ordering.
+
+## Phase 05 communities and messaging
+
+The plugin adds guarded BuddyPress Groups and Private Messaging helpers. Group membership actions use BuddyPress APIs and REST authentication. Message sending, replies, read/unread state, deletion requests, and thread access are validated against the logged-in participant before BuddyPress APIs are called. No parallel group or message tables are created, and the plugin does not activate BuddyPress components automatically.

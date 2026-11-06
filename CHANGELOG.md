@@ -28,3 +28,10 @@
 - Added member discovery and directory templates with search, sorting, interest filters, and deterministic recommendations.
 - Added Friends-component connection actions and saved-activity references in Social Discovery Core.
 - Added REST API permission checks, rate limits, and responsive social UI assets.
+
+## 1.4.0
+
+- Added BuddyPress Groups directory, details, activity, membership actions, and My Communities template.
+- Added BuddyPress Private Messaging inbox, conversations, compose, reply, and message-state foundation.
+- Added guarded companion-plugin permissions and REST handlers for group membership and private messages.
+- Added responsive community and messaging styles, scripts, Customizer settings, and documentation.

@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } $group = $args['group']; ?><section id="about" class="sd-panel"><h2><?php esc_html_e( 'About this community', 'social-discovery' ); ?></h2><div class="sd-rich-text"><?php echo wp_kses_post( wpautop( bp_get_group_description( $group ) ) ); ?></div></section>
