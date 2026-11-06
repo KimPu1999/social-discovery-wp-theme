@@ -1,0 +1,1 @@
+(function(){'use strict';var header=document.querySelector('.sd-site-header.is-sticky');if(!header)return;var admin=document.getElementById('wpadminbar');if(admin)header.style.top=admin.offsetHeight+'px';}());

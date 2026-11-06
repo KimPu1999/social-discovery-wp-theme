@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><?php sd_render_empty( __( 'Nothing here yet', 'social-discovery' ), __( 'Try another search or check back soon for new content.', 'social-discovery' ) ); ?>

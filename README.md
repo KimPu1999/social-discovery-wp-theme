@@ -1,19 +1,38 @@
 # Social Discovery
 
-Professional classic WordPress theme foundation for a community site. Requires no third-party plugin for activation. BuddyPress and Elementor are optional integrations; BuddyPress is used as the source of truth when active.
+Social Discovery is a classic WordPress theme foundation for a professional community site.
 
-## Theme structure
+## Requirements
 
-- `functions.php` — setup, assets, Customizer, plugin-safe helpers.
-- `front-page.php` — responsive logged-out landing page with working WordPress links.
-- `header.php`, `footer.php` — responsive navigation and fallbacks.
-- `theme.json`, `style.css`, `assets/js/theme.js` — design system, editor settings, dark mode, mobile drawer.
-- `companion-plugin/social-discovery-core/` — installable-source foundation for persistent discovery and moderation data.
+- WordPress 6.0 or newer.
+- PHP 7.4 or newer.
+- BuddyPress is optional and not required to activate the theme.
+- Elementor Free is optional. Elementor Pro Theme Builder can replace native header/footer locations when its display conditions apply.
 
-## Dependencies
+## Installation
 
-WordPress 6.0+, PHP 7.4+. BuddyPress is optional and should be installed separately when social features are needed. Elementor is optional. No core files are modified.
+1. Place this directory in `wp-content/themes/social-discovery`.
+2. Activate Social Discovery from Appearance → Themes.
+3. Set a site logo under Appearance → Customize → Site Identity.
+4. Assign Primary, Secondary, Footer, and Mobile menus under Appearance → Menus.
+5. Configure Appearance → Customize → Social Discovery.
 
-## Honest implementation status
+## Phase 01 features
 
-The theme foundation, landing page, responsive design system, Customizer controls, dark mode, accessible navigation, and plugin-safe fallbacks are implemented. BuddyPress-specific directories, messaging, notifications, moderation workflows, and recommendation queries need to be connected against an actual BuddyPress environment before being marked complete.
+- Modular classic-theme setup and translation-ready templates.
+- CSS custom-property design system with blue, purple, cyan, light, dark, and system modes.
+- Default, centered, and minimal header layouts.
+- Default, centered, and minimal footer layouts.
+- Customizer controls for header, footer, design, colors, spacing, CTA, sticky behavior, and social URLs.
+- Accessible responsive navigation with nested menu support, mobile drawer, overlay, Escape handling, and focus restoration.
+- Blog, page, archive, search, comments, 404, and page-template foundations.
+- Gutenberg wide alignment, responsive embeds, custom logo, featured images, and HTML5 support.
+- BuddyPress-safe compatibility foundation without duplicating social business logic.
+
+## Menus and Elementor
+
+The theme registers Primary, Secondary, Footer, and Mobile locations. Native templates are always available. Elementor Pro theme locations are registered through the supported Elementor API when Elementor is active, and the theme avoids rendering a native header or footer when Elementor supplies one.
+
+## Known limitations
+
+Live activation, Customizer persistence, Elementor rendering, browser responsiveness, and BuddyPress-specific pages require a running WordPress environment. BuddyPress member, activity, group, messaging, notification, and recommendation features are intentionally deferred to later phases.

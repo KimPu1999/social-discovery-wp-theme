@@ -1,0 +1,6 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_setup() { load_theme_textdomain( 'social-discovery', SD_DIR . '/languages' ); add_theme_support( 'title-tag' ); add_theme_support( 'post-thumbnails' ); add_theme_support( 'custom-logo', array( 'height' => 60, 'width' => 220, 'flex-height' => true, 'flex-width' => true ) ); add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', 'style', 'script' ) ); add_theme_support( 'responsive-embeds' ); add_theme_support( 'align-wide' ); add_theme_support( 'editor-styles' ); add_editor_style( array( 'style.css', 'assets/css/editor.css' ) ); register_nav_menus( array( 'primary' => __( 'Primary Menu', 'social-discovery' ), 'secondary' => __( 'Secondary Menu', 'social-discovery' ), 'footer' => __( 'Footer Menu', 'social-discovery' ), 'mobile' => __( 'Mobile Menu', 'social-discovery' ) ) ); add_image_size( 'sd-card', 640, 420, true ); }
+add_action( 'after_setup_theme', 'sd_setup' );
+function sd_widgets() { register_sidebar( array( 'name' => __( 'Footer Widgets', 'social-discovery' ), 'id' => 'footer-1', 'description' => __( 'Optional footer widgets.', 'social-discovery' ), 'before_widget' => '<section class="sd-widget">', 'after_widget' => '</section>', 'before_title' => '<h3>', 'after_title' => '</h3>' ) ); }
+add_action( 'widgets_init', 'sd_widgets' );

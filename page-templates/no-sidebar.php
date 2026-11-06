@@ -1,0 +1,1 @@
+<?php /* Template Name: No Sidebar */ get_header(); ?><main id="primary" class="sd-main"><div class="sd-container sd-content-wrap sd-no-sidebar"><?php while ( have_posts() ) : the_post(); get_template_part( 'template-parts/content/content-page' ); endwhile; ?></div></main><?php get_footer(); ?>

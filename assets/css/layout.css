@@ -1,0 +1,1 @@
+.sd-container{width:min(calc(100% - 32px),var(--sd-container))}.sd-entry-content{max-width:var(--sd-reading-width);margin-inline:auto}.sd-entry-content>*{max-width:100%}.sd-full-width .sd-entry-content{max-width:none}.sd-no-sidebar .sd-entry-content{max-width:var(--sd-reading-width)}.sd-blank-content{width:100%}

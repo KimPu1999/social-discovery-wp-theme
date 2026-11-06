@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><article <?php post_class( 'sd-card sd-card-body sd-entry-content' ); ?>><header class="sd-page-header"><h1><?php the_title(); ?></h1></header><?php the_content(); ?></article>

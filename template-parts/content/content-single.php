@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><article <?php post_class( 'sd-card sd-card-body sd-entry-content' ); ?>><header class="sd-page-header"><div class="sd-breadcrumbs"><?php echo esc_html( get_the_date() ); ?></div><h1><?php the_title(); ?></h1></header><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'large' ); } ?><?php the_content(); ?></article>
