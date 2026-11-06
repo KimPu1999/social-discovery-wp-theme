@@ -1,0 +1,1 @@
+(function(){'use strict';document.querySelectorAll('[data-sd-toggle-password]').forEach(function(button){button.addEventListener('click',function(){var input=button.parentElement.querySelector('input');if(!input)return;var visible=input.type==='text';input.type=visible?'password':'text';button.setAttribute('aria-label',visible?'Show password':'Hide password');});});}());

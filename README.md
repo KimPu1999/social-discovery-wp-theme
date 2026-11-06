@@ -46,6 +46,22 @@ Dynamic sections never fabricate members, groups, activity, interests, or articl
 
 Recommended images: hero images around 1200×800px; article card images around 640×420px.
 
+## Phase 03 member experience
+
+- Native WordPress login, registration, password recovery, and reset templates.
+- Registration respects `users_can_register` and uses the companion plugin only for the secure custom form handler.
+- Multi-step onboarding for account preparation, profile information, avatar guidance, interests, privacy, and completion.
+- Member profile and account-settings templates with ownership checks.
+- BuddyPress-safe avatar, activity, profile-field, and activation detection.
+- Profile visibility options are enforced by Social Discovery Core for public, members-only, and private profiles.
+- Header account navigation shows profile, settings, and logout actions for authenticated members.
+
+## Authentication setup
+
+Create pages using the Login, Register, Forgot Password, Reset Password, Onboarding, Member Profile, and Account Settings templates. Enable registration in Settings → General only when the site is ready to accept accounts. When Social Discovery Core is inactive, the theme falls back to native WordPress login and recovery links.
+
+The companion plugin owns onboarding state, interest preferences, profile privacy, rate limits, form handlers, and profile updates. BuddyPress remains the source of truth for extended profiles, avatars, cover images, groups, activity, and activation when installed. Email delivery is not claimed as configured; verify `wp_mail()` or SMTP separately.
+
 ## Menus and Elementor
 
 The theme registers Primary, Secondary, Footer, and Mobile locations. Native templates are always available. Elementor Pro theme locations are registered through the supported Elementor API when Elementor is active, and the theme avoids rendering a native header or footer when Elementor supplies one.

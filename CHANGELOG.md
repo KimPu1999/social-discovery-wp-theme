@@ -13,3 +13,11 @@
 - Added WordPress and BuddyPress-safe public content sources with empty-state hiding.
 - Added homepage Customizer panel and Elementor-compatible page templates.
 - Added responsive homepage styles and lightweight interactions.
+
+## 1.2.0
+
+- Added native WordPress authentication templates and secure companion-plugin handlers.
+- Added registration, login, password recovery, and reset-password flows.
+- Added multi-step onboarding with progress, profile, interest, privacy, and completion screens.
+- Added member profile, account settings, profile visibility, and header account navigation.
+- Added BuddyPress-safe profile, avatar, public activity, and activation integration points.

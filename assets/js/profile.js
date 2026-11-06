@@ -1,0 +1,1 @@
+(function(){'use strict';document.querySelectorAll('.sd-settings-nav a[href^="#"]').forEach(function(link){link.addEventListener('click',function(){document.querySelectorAll('.sd-settings-nav a').forEach(function(item){item.classList.remove('is-active');});link.classList.add('is-active');});});}());

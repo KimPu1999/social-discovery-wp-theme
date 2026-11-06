@@ -1,0 +1,5 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+function sd_core_available_interests() { $configured = get_option( 'sd_core_interests', array() ); if ( is_array( $configured ) && ! empty( $configured ) ) { return array_values( array_filter( array_map( 'sanitize_text_field', $configured ) ) ); } return array( 'Art & Design', 'Books', 'Cooking', 'Film', 'Fitness', 'Gaming', 'Music', 'Nature', 'Photography', 'Technology', 'Travel', 'Writing' ); }
+function sd_core_user_interests( $user_id ) { $value = get_user_meta( $user_id, 'sd_user_interests', true ); return is_array( $value ) ? array_values( array_intersect( array_map( 'sanitize_text_field', $value ), sd_core_available_interests() ) ) : array(); }
+function sd_core_save_interests( $user_id, $values ) { $values = is_array( $values ) ? array_map( 'sanitize_text_field', $values ) : array(); $values = array_values( array_unique( array_intersect( $values, sd_core_available_interests() ) ) ); update_user_meta( $user_id, 'sd_user_interests', $values ); return $values; }

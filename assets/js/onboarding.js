@@ -1,0 +1,1 @@
+(function(){'use strict';document.querySelectorAll('.sd-onboarding-actions button').forEach(function(button){button.addEventListener('click',function(){button.form.classList.add('is-submitting');});});}());

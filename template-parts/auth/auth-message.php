@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } $type = isset( $args['type'] ) ? $args['type'] : 'error'; $message = isset( $args['message'] ) ? $args['message'] : ''; ?><div class="sd-auth-message sd-auth-message-<?php echo esc_attr( $type ); ?>" role="<?php echo 'error' === $type ? 'alert' : 'status'; ?>"><?php echo esc_html( $message ); ?></div>

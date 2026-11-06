@@ -1,0 +1,1 @@
+<?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?><div class="sd-auth-shell"><div class="sd-auth-card"><div class="sd-auth-brand"><?php sd_render_site_branding(); ?></div><?php sd_auth_message(); ?><?php echo isset( $args['content'] ) ? $args['content'] : ''; ?></div></div>
