@@ -1,7 +1,7 @@
 <?php
 /** Social Discovery theme bootstrap. */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-define( 'SD_VERSION', '1.5.0' );
+define( 'SD_VERSION', '1.6.0' );
 define( 'SD_DIR', get_template_directory() );
 define( 'SD_URI', get_template_directory_uri() );
 require_once SD_DIR . '/inc/theme-defaults.php';
